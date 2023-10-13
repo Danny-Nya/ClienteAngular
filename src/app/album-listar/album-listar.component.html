@@ -1,8 +1,11 @@
 <p>album-listar works!</p>
 
+
 <div *ngFor="let album of albumes">
-
-  {{album.name}}
-  {{album.artist}}
-
+  <h2>{{ album.name }}</h2>
+  <ul>
+    <li *ngFor="let track of album.trackListing">
+      {{ track.title }}
+    </li>
+  </ul>
 </div>

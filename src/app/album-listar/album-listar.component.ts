@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlbumListarService } from '../album-listar.service';
+import { Album } from '../modelo/album.interface';
 
 @Component({
   selector: 'app-album-listar',
@@ -8,13 +9,12 @@ import { AlbumListarService } from '../album-listar.service';
 })
 export class AlbumListarComponent implements OnInit{
 
-  albumes: Array<any> = []
-  tracks: Array<any> = []
+  albumes: Album[] = [];
   constructor(private albumListaService: AlbumListarService){
 
   }
   ngOnInit(): void {
-    this.albumListaService.getAll().subscribe(data => {
+    this.albumListaService.getAll().subscribe((data: Album[]) => {
 
       this.albumes = data;
     })

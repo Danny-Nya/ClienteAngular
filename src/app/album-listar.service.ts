@@ -1,13 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Album } from './modelo/album.interface';
+
 @Injectable()
 export class AlbumListarService {
 
   constructor(private http: HttpClient) {}
 
-  getAll(): Observable<any>{
+  getAll(): Observable<Album[]>{
 
-    return this.http.get("//localhost:8080/Album/Lista");
+    return this.http.get<Album[]>("//localhost:8080/Album/Lista");
   }
 }
