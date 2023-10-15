@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GeneroListaService } from '../genero-lista.service';
+
 @Component({
   selector: 'app-genero-lista',
   templateUrl: './genero-lista.component.html',

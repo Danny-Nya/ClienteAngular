@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -66,7 +67,11 @@
               "browserTarget": "angularFrontEndClient:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "browserTarget": "move-safe:build",
+            "proxyConfig": "proxy.conf.json"
+  }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",

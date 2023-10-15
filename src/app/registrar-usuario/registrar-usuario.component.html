@@ -1,0 +1,26 @@
+
+<p>Registrar Usuario</p>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre" placeholder="Nombre">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Correo</mat-label>
+    <input matInput formControlName="correo" placeholder="Correo">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Contraseña</mat-label>
+    <input matInput formControlName="contrasena" type="password" placeholder="Contraseña">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre de Perfil</mat-label>
+    <input matInput formControlName="nombrePerfil" placeholder="Nombre de Perfil">
+  </mat-form-field>
+
+  <button type="submit">Agregar Usuario</button>
+</form>
+
