@@ -21,6 +21,8 @@ import { UsuarioVotanteListService } from './usuario-votante-list.service';
 import { UsuarioVotanteListComponent } from './usuario-votante-list/usuario-votante-list.component';
 import { VotoListaService } from './voto-lista.service';
 import { VotoListaComponent } from './voto-lista/voto-lista.component';
+import { HomeComponent } from './home/home.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     AlbumListarComponent,
     RecomendarListaComponent,
     VotoListaComponent,
-    RegistrarUsuarioComponent
+    RegistrarUsuarioComponent,
+    HomeComponent,
+    PostDetailComponent
 
   ],
   imports: [
