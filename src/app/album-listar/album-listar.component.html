@@ -1,13 +1,17 @@
 <p>album-listar works!</p>
 
-
+<mat-card class = "custom-mat-card">
 <div *ngFor="let album of albumes">
-  <h2>{{ album.name }}</h2>
+  <mat-card-header>  {{album.name }} </mat-card-header>
+
   <ul>
+
     <li *ngFor="let track of album.trackListing">
-      <mat-card class = "custom-mat-card">
-        <mat-card-content>{{track.title}}</mat-card-content>
-      </mat-card>
+      <mat-list>
+        <mat-list-item>{{track.title}}</mat-list-item>
+      </mat-list>
+
     </li>
   </ul>
 </div>
+</mat-card>

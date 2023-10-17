@@ -11,6 +11,8 @@ export class RegistrarUsuarioComponent implements OnInit {
 
   userForm: FormGroup;
 
+  showRegistrarUsuario: boolean = true
+
   constructor(private formBuilder: FormBuilder, private registarUsuarioService: RegistrarUsuarioService){
     this.userForm = this.formBuilder.group({
       nombre:['',Validators.required],

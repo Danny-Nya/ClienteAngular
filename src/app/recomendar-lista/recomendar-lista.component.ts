@@ -15,7 +15,8 @@ export class RecomendarListaComponent implements OnInit{
   recomendaciones : Recomendacion[] = []
   genero: Observable<Genero>[] = []
   album: Observable<Album>[] = []
-
+  
+  showRecomendacion: boolean = true
 
   constructor(private recomendarListaService: RecomendarListaService){}
   ngOnInit(): void {

@@ -9,6 +9,8 @@ import { Album } from '../modelo/album.interface';
 })
 export class AlbumListarComponent implements OnInit{
 
+  showInfoAlbumConTracks: boolean = true
+
   albumes: Album[] = [];
   constructor(private albumListaService: AlbumListarService){
 

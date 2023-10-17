@@ -9,6 +9,8 @@ import { GeneroListaService } from '../genero-lista.service';
 export class GeneroListaComponent implements OnInit {
   generos :Array<any> = [];
 
+  showListaDeGeneros: boolean = true
+
   constructor(private generoListaService: GeneroListaService){}
   ngOnInit(): void {
     this.generoListaService.getAll().subscribe(data => {
