@@ -27,6 +27,8 @@ import { RecomendarListaComponent } from './recomendar-lista/recomendar-lista.co
 import { RegistrarUsuarioService } from './registrar-usuario.service';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 import { ToolBarHeaderComponent } from './tool-bar-header/tool-bar-header.component';
+import { TrackDeAlbumService } from './track-de-album.service';
+import { TrackDeAlbumComponent } from './track-de-album/track-de-album.component';
 import { UsuarioVotanteListService } from './usuario-votante-list.service';
 import { UsuarioVotanteListComponent } from './usuario-votante-list/usuario-votante-list.component';
 import { VotoListaService } from './voto-lista.service';
@@ -44,7 +46,8 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     RegistrarUsuarioComponent,
     HomeComponent,
     PostDetailComponent,
-    ToolBarHeaderComponent
+    ToolBarHeaderComponent,
+    TrackDeAlbumComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +73,8 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     AlbumListarService,
     RecomendarListaService,
     VotoListaService,
-    RegistrarUsuarioService
+    RegistrarUsuarioService,
+    TrackDeAlbumService
   ],
   bootstrap: [AppComponent]
 })
