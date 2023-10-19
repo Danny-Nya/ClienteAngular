@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'registrar-usuario', component: RegistrarUsuarioComponent },
   { path: 'usuario-votante-list', component: UsuarioVotanteListComponent },
   { path: 'voto-lista', component: VotoListaComponent },
+  {path: 'registroUsuario', component: RegistrarUsuarioComponent},
 
   // Ruta predeterminada, redirecciona a 'home' por defecto
   { path: '', redirectTo: 'home', pathMatch: 'full' },

@@ -38,7 +38,7 @@ export class RegistrarUsuarioComponent implements OnInit {
         }
       );
     }
-}
+  }
 
 }
 
