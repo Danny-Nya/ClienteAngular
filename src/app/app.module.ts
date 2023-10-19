@@ -12,12 +12,16 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+
 import { AlbumListarService } from './album-listar.service';
 import { AlbumListarComponent } from './album-listar/album-listar.component';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GeneroListaService } from './genero-lista.service';
 import { GeneroListaComponent } from './genero-lista/genero-lista.component';
+import { HomeComponent } from './home/home.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 import { RecomendarListaService } from './recomendar-lista.service';
 import { RecomendarListaComponent } from './recomendar-lista/recomendar-lista.component';
 import { RegistrarUsuarioService } from './registrar-usuario.service';
@@ -38,8 +42,9 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     RecomendarListaComponent,
     VotoListaComponent,
     RegistrarUsuarioComponent,
+    HomeComponent,
+    PostDetailComponent,
     ToolBarHeaderComponent
-
   ],
   imports: [
     BrowserModule,
@@ -59,8 +64,14 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     MatIconModule
 
   ],
-  providers: [GeneroListaService,UsuarioVotanteListService,AlbumListarService,RecomendarListaService,VotoListaService,
-    RegistrarUsuarioService],
+  providers: [
+    GeneroListaService,
+    UsuarioVotanteListService,
+    AlbumListarService,
+    RecomendarListaService,
+    VotoListaService,
+    RegistrarUsuarioService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

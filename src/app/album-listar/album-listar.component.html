@@ -1,17 +1,22 @@
 <p>album-listar works!</p>
 
-<mat-card class = "custom-mat-card">
 <div *ngFor="let album of albumes">
-  <mat-card-header>  {{album.name }} </mat-card-header>
+<mat-card class="custom-mat-card" [style.background]="generateGradient(album.colorscheme)">
 
-  <ul>
-
-    <li *ngFor="let track of album.trackListing">
-      <mat-list>
-        <mat-list-item>{{track.title}}</mat-list-item>
-      </mat-list>
-
-    </li>
-  </ul>
-</div>
+  <mat-card-header>
+    <mat-card-title>{{ album.name }}</mat-card-title>
+    <mat-card-subtitle>{{ album.artist }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Type: {{ album.type }}</p>
+    <p>Release Date: {{ album.release_date | date }}</p>
+    <p>RYM Rating: {{ album.rym_rating }}</p>
+    <p>Language: {{ album.language }}</p>
+    <p>Genres: {{ album.genres }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-stroked-button>View Album</button>
+  </mat-card-actions>
 </mat-card>
+</div>
+
