@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { RegistrarUsuarioService } from '../registrar-usuario.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class RegistrarUsuarioComponent implements OnInit {
 
   showRegistrarUsuario: boolean = true
 
-  constructor(private formBuilder: FormBuilder, private registarUsuarioService: RegistrarUsuarioService){
+  constructor(private formBuilder: FormBuilder, private registarUsuarioService: RegistrarUsuarioService, private router: Router){
     this.userForm = this.formBuilder.group({
       nombre:['',Validators.required],
       correo:['',Validators.compose([Validators.required,Validators.email])],
@@ -32,6 +33,7 @@ export class RegistrarUsuarioComponent implements OnInit {
       this.registarUsuarioService.addUser(userData).subscribe(
         (response) => {
           console.log('se agrego en usuario')
+          this.router.navigate([''])
         },
         (error) => {
         console.error('error fetching data')
