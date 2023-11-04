@@ -1,6 +1,5 @@
 
-<div *ngFor="let recomendacion of recomendaciones ">
- <h2>{{recomendacion.album_id}}</h2>
- {{ recomendacion.genero.nombre }}
- {{ recomendacion.album.name }}
+<div *ngFor="let album of albums">
+ <h2>{{album.name}}</h2>
+
 </div>
