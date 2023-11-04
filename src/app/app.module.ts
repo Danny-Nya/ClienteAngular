@@ -1,5 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -21,6 +22,12 @@ import { UsuarioVotanteListService } from './usuario-votante-list.service';
 import { UsuarioVotanteListComponent } from './usuario-votante-list/usuario-votante-list.component';
 import { VotoListaService } from './voto-lista.service';
 import { VotoListaComponent } from './voto-lista/voto-lista.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginFormComponent } from './login-cliente/login-cliente-form.component';
+import { MenuClienteComponent } from './menu-cliente/menu-cliente.component';
+import { LoginClienteComponent } from './login-cliente/login-cliente.component';
+import { LoginAdminComponent } from './login-admin/login-admin.component';
+import { LoginAdminFormComponent } from './login-admin/login-admin-form.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +37,12 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     AlbumListarComponent,
     RecomendarListaComponent,
     VotoListaComponent,
-    RegistrarUsuarioComponent
-
+    RegistrarUsuarioComponent, 
+    LoginFormComponent, 
+    MenuClienteComponent, 
+    LoginClienteComponent, 
+    LoginAdminComponent,
+    LoginAdminFormComponent
   ],
   imports: [
     BrowserModule,
@@ -43,11 +54,12 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     MatToolbarModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
-
+    MatInputModule, 
+    BrowserAnimationsModule
   ],
   providers: [GeneroListaService,UsuarioVotanteListService,AlbumListarService,RecomendarListaService,VotoListaService,
     RegistrarUsuarioService],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
