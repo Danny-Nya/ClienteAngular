@@ -33,6 +33,7 @@ import { UsuarioVotanteListService } from './usuario-votante-list.service';
 import { UsuarioVotanteListComponent } from './usuario-votante-list/usuario-votante-list.component';
 import { VotoListaService } from './voto-lista.service';
 import { VotoListaComponent } from './voto-lista/voto-lista.component';
+import { TokenAuthComponentComponent } from './token-auth-component/token-auth-component.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     HomeComponent,
     PostDetailComponent,
     ToolBarHeaderComponent,
-    TrackDeAlbumComponent
+    TrackDeAlbumComponent,
+    TokenAuthComponentComponent
   ],
   imports: [
     BrowserModule,
