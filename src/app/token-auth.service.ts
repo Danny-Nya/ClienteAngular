@@ -1,27 +1,33 @@
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, catchError, throwError } from 'rxjs';
 
 @Injectable()
-export class TokenService {
-  private apiUrl = 'http://localhost:8081/public/autenticacion-usuario';
+export class TokenAuthService {
+
 
   constructor(private http: HttpClient) {}
 
   createToken(correo: string, contrasena: string): Observable<any> {
     const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/x-www-form-urlencoded',
       'Authorization': 'Bearer'
     });
 
-    const params = new HttpParams()
-      .set('correo', correo)
-      .set('contrasena', contrasena);
+    const body = new URLSearchParams();
+    body.set('correo', correo);
+    body.set('contrasena', contrasena);
 
 
-    const options = { headers, params };
 
-    return this.http.post(this.apiUrl, null, options);
+
+    return this.http.post('/public/autenticacion-usuario', body.toString(), {headers})
+    .pipe(
+      catchError((error: any) => {
+        console.error('Error occurred:', error);
+        return throwError(error);
+      })
+    );
   }
 }
 

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { TokenService } from '../token-auth.service';
+import { TokenAuthService } from '../token-auth.service';
 
 @Component({
   selector: 'app-login-cliente',
@@ -12,7 +12,7 @@ export class LoginClienteComponent implements OnInit {
 
   userForm: FormGroup;
 
-  constructor(private router:Router, private formBuilder: FormBuilder, private tokenService: TokenService){
+  constructor(private router:Router, private formBuilder: FormBuilder, private tokenService: TokenAuthService){
 
     this.userForm = this.formBuilder.group({
       username: ['', Validators.required],
@@ -38,6 +38,8 @@ export class LoginClienteComponent implements OnInit {
         console.error('Status:', error.status);
         console.error('Status Text:', error.statusText);
         console.error('Error Response:', error.error);
+        console.error('Error Response:', error.message);
+
         }
       );
     }
