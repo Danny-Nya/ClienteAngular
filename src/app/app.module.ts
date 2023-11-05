@@ -33,6 +33,7 @@ import { RecomendarListaComponent } from './recomendar-lista/recomendar-lista.co
 import { RegistrarUsuarioService } from './registrar-usuario.service';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 import { TokenAuthComponentComponent } from './token-auth-component/token-auth-component.component';
+import { TokenService } from './token-auth.service';
 import { ToolBarHeaderComponent } from './tool-bar-header/tool-bar-header.component';
 import { TrackDeAlbumService } from './track-de-album.service';
 import { TrackDeAlbumComponent } from './track-de-album/track-de-album.component';
@@ -88,7 +89,8 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     RecomendarListaService,
     VotoListaService,
     RegistrarUsuarioService,
-    TrackDeAlbumService
+    TrackDeAlbumService,
+    TokenService
   ],
 
   bootstrap: [AppComponent]

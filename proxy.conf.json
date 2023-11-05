@@ -12,5 +12,15 @@
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true
+  },
+
+  "/public/autenticacion-usuario":{
+
+    "target": "http://localhost:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+
+
   }
 }

@@ -1,5 +1,5 @@
-import { Input, Component, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'my-login-form',
@@ -28,7 +28,7 @@ import { FormGroup, FormControl } from '@angular/forms';
           <div><a routerLink="/loginAdmin" routerLinkActive="active" ariaCurrentWhenActive="page" type="submit" mat-button>Soy Admin</a></div>
 
           <div class="button">
-            <button routerLink="/menu" routerLinkActive="active" ariaCurrentWhenActive="page" type="submit" mat-button>Login</button>
+            <button type="submit" mat-button>Login</button>
           </div>
 
         </form>
