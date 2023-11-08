@@ -13,21 +13,22 @@ import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { TrackDeAlbumComponent } from './track-de-album/track-de-album.component';
 import { UsuarioVotanteListComponent } from './usuario-votante-list/usuario-votante-list.component';
 import { VotoListaComponent } from './voto-lista/voto-lista.component';
+import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 
 const routes: Routes = [
   { path: 'album-lista', component: AlbumListarComponent },
-  {path: 'album-lista/:id', component: TrackDeAlbumComponent},
+  { path: 'album-lista/:id', component: TrackDeAlbumComponent},
   { path: 'genero-lista', component: GeneroListaComponent },
   { path: 'home', component: HomeComponent },
   { path: 'recomendar-lista', component: RecomendarListaComponent },
   { path: 'registrar-usuario', component: RegistrarUsuarioComponent },
   { path: 'usuario-votante-list', component: UsuarioVotanteListComponent },
   { path: 'voto-lista', component: VotoListaComponent },
-  {path: 'registroUsuario', component: RegistrarUsuarioComponent},
-  {path: 'registroUsuario', component: RegistrarUsuarioComponent},
-  {path: 'menu', component: MenuClienteComponent},
-{path: 'loginAdmin', component: LoginAdminComponent},
-  {path: '', component: LoginClienteComponent},
+  { path: 'registroUsuario', component: RegistrarUsuarioComponent},
+  { path: 'menu-admin', component: MenuAdminComponent},
+  { path: 'menu', component: MenuClienteComponent},
+  { path: 'loginAdmin', component: LoginAdminComponent},
+  { path: '', component: LoginClienteComponent},
 
   // Si se ingresa una ruta no existente, redirecciona a 'home'
   { path: '**', redirectTo: 'home', pathMatch: 'full' }

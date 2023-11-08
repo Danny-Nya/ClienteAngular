@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { GeneroListaService } from '../genero-lista.service';
+import { GeneroService } from '../service/genero.service';
 import { Genero } from '../modelo/genero.interface';
 
 @Component({
@@ -9,18 +9,18 @@ import { Genero } from '../modelo/genero.interface';
   styleUrls: ['./genero-lista.component.css']
 })
 export class GeneroListaComponent implements OnInit {
-  generos :Array<any> = [];
+  generos :Array<Genero> = [];
   clickedGenero: Genero | null = null;
 
 
-  constructor(private generoListaService: GeneroListaService, private router: Router){}
+  constructor(private generoService: GeneroService, private router: Router){}
   ngOnInit(): void {
-    this.generoListaService.getAll().subscribe(data => {
+    this.generoService.lista().subscribe(data => {
 
       this.generos = data;
     })
 
-    this.generoListaService.generoClick$.subscribe((genero) =>
+    this.generoService.generoClick$.subscribe((genero) =>
       this.handleGeneroClick(genero));
   }
 

@@ -27,7 +27,7 @@ import { FormGroup, FormControl } from '@angular/forms';
          <div><a routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page" type="submit" mat-button>Soy Cliente</a></div>
 
           <div class="button">
-            <button routerLink="/menu" routerLinkActive="active" ariaCurrentWhenActive="page" type="submit" mat-button>Login</button>
+            <button routerLink="/menu-admin" routerLinkActive="active" ariaCurrentWhenActive="page" type="submit" mat-button>Login</button>
           </div>
 
         </form>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { GeneroListaService } from '../genero-lista.service';
+import { GeneroService } from '../service/genero.service';
 import { Album } from '../modelo/album.interface';
 import { Genero } from '../modelo/genero.interface';
 import { Recomendacion } from '../modelo/recomendacion.interface';
@@ -22,7 +22,7 @@ export class RecomendarListaComponent implements OnInit{
   generoId: number = -1;
   showRecomendacion: boolean = true
 
-  constructor(private recomendarListaService: RecomendarListaService, private geroLista: GeneroListaService,private route: ActivatedRoute){
+  constructor(private recomendarListaService: RecomendarListaService, private generoService: GeneroService,private route: ActivatedRoute){
 
     this.route.params.subscribe(params => {
       if (params['genero']) {
