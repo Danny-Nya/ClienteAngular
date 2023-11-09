@@ -11,6 +11,7 @@ import { RegistrarUsuarioService } from '../registrar-usuario.service';
 export class RegistrarUsuarioComponent implements OnInit {
 
   userForm: FormGroup;
+  errorMessage: String;
 
   showRegistrarUsuario: boolean = true
 
@@ -32,11 +33,16 @@ export class RegistrarUsuarioComponent implements OnInit {
       console.log(userData)
       this.registarUsuarioService.addUser(userData).subscribe(
         (response) => {
-          console.log('se agrego en usuario')
+          console.log('se agrego en usuario',response)
           this.router.navigate([''])
         },
         (error) => {
-        console.error('error fetching data')
+          if (error.status === 409) {
+            this.errorMessage = error.error;
+            console.error(this.errorMessage);
+
+          }
+        console.error(error)
         }
       );
     }

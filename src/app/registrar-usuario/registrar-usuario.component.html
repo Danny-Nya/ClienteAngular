@@ -22,9 +22,11 @@
         <mat-label>Nombre de Perfil</mat-label>
         <input type="text" matInput formControlName="nombrePerfil" placeholder="Nombre de Perfil">
       </mat-form-field></p>
-      <div><a routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page" type="submit" mat-button>Ya tienes Cuenta?</a></div>
+      <div style="display: flex; flex-direction: column; height: 100px;"><a routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page" type="submit" mat-button>Ya tienes Cuenta?</a>
+        <h2>{{errorMessage}}</h2></div>
       <button type="submit" mat-button>Registrarse</button>
     </form>
+
   </mat-card-content>
 </mat-card>
 
