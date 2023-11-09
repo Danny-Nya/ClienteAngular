@@ -19,8 +19,6 @@ export class TokenAuthService {
     body.set('contrasena', contrasena);
 
 
-
-
     return this.http.post('/public/autenticacion-usuario', body.toString(), {headers})
     .pipe(
       catchError((error: any) => {

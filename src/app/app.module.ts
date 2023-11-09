@@ -12,7 +12,6 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,6 +33,7 @@ import { RegistrarUsuarioService } from './registrar-usuario.service';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 import { TokenAuthComponentComponent } from './token-auth-component/token-auth-component.component';
 import { TokenAuthService } from './token-auth.service';
+import { TokenPostBackendService } from './token-post-backend.service';
 import { ToolBarHeaderComponent } from './tool-bar-header/tool-bar-header.component';
 import { TrackDeAlbumService } from './track-de-album.service';
 import { TrackDeAlbumComponent } from './track-de-album/track-de-album.component';
@@ -90,7 +90,8 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     VotoListaService,
     RegistrarUsuarioService,
     TrackDeAlbumService,
-    TokenAuthService
+    TokenAuthService,
+    TokenPostBackendService
   ],
 
   bootstrap: [AppComponent]
