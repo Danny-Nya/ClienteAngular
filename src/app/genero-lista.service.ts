@@ -8,8 +8,8 @@ export class GeneroListaService {
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<any>{
-    return this.http.get('//localhost:8080/Genero/Lista');
+  getAll(): Observable<Genero[]>{
+    return this.http.get<Genero[]>('//localhost:8080/Genero/Lista');
   }
 
   private generoClickSource = new Subject<Genero>();
