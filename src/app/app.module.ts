@@ -12,9 +12,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlbumListarComponent } from './front-admin/album-listar/album-listar.component';
 import { AppComponent } from './app.component';
@@ -44,7 +42,13 @@ import { MenuAdminGeneroComponent } from './front-admin/menu-admin-genero/menu-a
 import { MenuAdminCancionComponent } from './front-admin/menu-admin-cancion/menu-admin-cancion.component';
 import { FormAlbumComponent } from './front-admin/form-album/form-album.component';
 import { EditarAlbumComponent } from './front-admin/editar-album/editar-album.component';
-
+import { EditarCancionComponent } from './front-admin/editar-cancion/editar-cancion.component';
+import { EditarGeneroComponent } from './front-admin/editar-genero/editar-genero.component';
+import { FormGeneroComponent } from './front-admin/form-genero/form-genero.component';
+import { TrackService } from './service/track.service';
+import { CancionListarComponent } from './front-admin/cancion-listar/cancion-listar.component';
+import { FormCancionComponent } from './front-admin/form-cancion/form-cancion.component';
+import { GeneroListarComponent } from './front-admin/genero-listar/genero-listar.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +57,7 @@ import { EditarAlbumComponent } from './front-admin/editar-album/editar-album.co
     UsuarioVotanteListComponent,
     RecomendarListaComponent,
     AlbumListarComponent,
+    CancionListarComponent,
     VotoListaComponent,
     RegistrarUsuarioComponent,
     LoginFormComponent,
@@ -69,7 +74,12 @@ import { EditarAlbumComponent } from './front-admin/editar-album/editar-album.co
     MenuAdminGeneroComponent,
     MenuAdminCancionComponent,
     FormAlbumComponent,
-    EditarAlbumComponent
+    EditarAlbumComponent,
+    EditarCancionComponent,
+    EditarGeneroComponent,
+    FormGeneroComponent,
+    FormCancionComponent,
+    GeneroListarComponent
   ],
   imports: [
     BrowserModule,
@@ -96,7 +106,8 @@ import { EditarAlbumComponent } from './front-admin/editar-album/editar-album.co
     VotoListaService,
     TrackDeAlbumService,
     AlbumService,
-    GeneroService
+    GeneroService,
+    TrackService
   ],
 
   bootstrap: [AppComponent]

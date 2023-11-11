@@ -20,22 +20,22 @@ export class GeneroService {
   }
 
   public lista(): Observable<Genero[]> {
-    return this.httpClient.get<Genero[]>(this.GeneroURL +'/Lista');
+    return this.httpClient.get<Genero[]>(this.GeneroURL +`/Lista`);
   }
 
   public detail(id: number): Observable<Genero> {
-    return this.httpClient.get<Genero>(this.GeneroURL +'/Buscar/${id}');
+    return this.httpClient.get<Genero>(this.GeneroURL +`/Buscar/${id}`);
   }
 
   public save(producto: Genero): Observable<any> {
-    return this.httpClient.post<any>(this.GeneroURL +'/Agregar', producto);
+    return this.httpClient.post<any>(this.GeneroURL +`/Agregar`, producto);
   }
 
   public update(id: number, producto: Genero): Observable<any> {
-    return this.httpClient.put<any>(this.GeneroURL +'/Actualizar', producto);
+    return this.httpClient.put<any>(this.GeneroURL +`/Actualizar`, producto);
   }
 
   public delete(id: number): Observable<any> {
-    return this.httpClient.delete<any>(this.GeneroURL +'/Borrar/${id}');
+    return this.httpClient.delete<any>(this.GeneroURL +`/Borrar/${id}`);
   }
 }

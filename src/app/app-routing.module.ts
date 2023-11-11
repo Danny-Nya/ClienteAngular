@@ -16,6 +16,8 @@ import { MenuAdminAlbumComponent } from './front-admin/menu-admin-album/menu-adm
 import { MenuAdminCancionComponent } from './front-admin/menu-admin-cancion/menu-admin-cancion.component';
 import { MenuAdminGeneroComponent } from './front-admin/menu-admin-genero/menu-admin-genero.component';
 import { EditarAlbumComponent } from './front-admin/editar-album/editar-album.component';
+import { EditarCancionComponent } from './front-admin/editar-cancion/editar-cancion.component';
+import { EditarGeneroComponent } from './front-admin/editar-genero/editar-genero.component';
 
 const routes: Routes = [
   { path: 'album-lista', component: AlbumListarComponent },
@@ -34,6 +36,8 @@ const routes: Routes = [
   { path: 'menu-admin-genero', component: MenuAdminGeneroComponent},
   { path: 'menu-admin-cancion', component:MenuAdminCancionComponent},
   { path: 'editar-admin-album/:id', component:EditarAlbumComponent},
+  { path: 'editar-admin-track/:id', component:EditarCancionComponent},
+  { path: 'editar-admin-genero/:id', component:EditarGeneroComponent},
   { path: '', component: LoginClienteComponent},
 
   // Si se ingresa una ruta no existente, redirecciona a 'home'
