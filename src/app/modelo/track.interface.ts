@@ -6,3 +6,4 @@ export interface Track {
   duration: string | null;
   album: Album;
 }
+

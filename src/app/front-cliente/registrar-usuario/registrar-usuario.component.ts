@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { RegistrarUsuarioService } from '../registrar-usuario.service';
+import { UsuarioService } from 'src/app/service/usuario.service';
 
 @Component({
   selector: 'app-registrar-usuario',
@@ -14,7 +14,7 @@ export class RegistrarUsuarioComponent implements OnInit {
 
   showRegistrarUsuario: boolean = true
 
-  constructor(private formBuilder: FormBuilder, private registarUsuarioService: RegistrarUsuarioService, private router: Router){
+  constructor(private formBuilder: FormBuilder, private usuarioService: UsuarioService, private router: Router){
     this.userForm = this.formBuilder.group({
       nombre:['',Validators.required],
       correo:['',Validators.compose([Validators.required,Validators.email])],
@@ -30,7 +30,7 @@ export class RegistrarUsuarioComponent implements OnInit {
     if (this.userForm.valid) {
       const userData = this.userForm.value;
       console.log(userData)
-      this.registarUsuarioService.addUser(userData).subscribe(
+      this.usuarioService.save(userData).subscribe(
         (response) => {
           console.log('se agrego en usuario')
           this.router.navigate([''])

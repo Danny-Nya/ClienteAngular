@@ -9,7 +9,7 @@ import { Genero } from '../modelo/genero.interface';
   styleUrls: ['./genero-lista.component.css']
 })
 export class GeneroListaComponent implements OnInit {
-  generos :Array<Genero> = [];
+  generos :Array<any> = [];
   clickedGenero: Genero | null = null;
 
 

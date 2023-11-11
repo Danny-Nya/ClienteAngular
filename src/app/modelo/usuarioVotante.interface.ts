@@ -1,6 +1,6 @@
-export interface UsuarioVotante{
+export interface UsuarioVotante {
 
-  id : number
+  id: number
   nombre: string
   correo: string
   nombrePerfil: string

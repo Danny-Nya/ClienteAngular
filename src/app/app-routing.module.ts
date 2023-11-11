@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AlbumListarComponent } from './album-listar/album-listar.component';
+import { AlbumListarComponent } from './front-admin/album-listar/album-listar.component';
 import { GeneroListaComponent } from './genero-lista/genero-lista.component';
 import { HomeComponent } from './home/home.component';
 import { RecomendarListaComponent } from './recomendar-lista/recomendar-lista.component';
-import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
-
-import { MenuClienteComponent } from './menu-cliente/menu-cliente.component';
-import { LoginClienteComponent } from './login-cliente/login-cliente.component';
-import { LoginAdminComponent } from './login-admin/login-admin.component';
-
+import { RegistrarUsuarioComponent } from './front-cliente/registrar-usuario/registrar-usuario.component';
+import { MenuClienteComponent } from './front-cliente/menu-cliente/menu-cliente.component';
+import { LoginClienteComponent } from './front-cliente/login-cliente/login-cliente.component';
+import { LoginAdminComponent } from './front-admin/login-admin/login-admin.component';
 import { TrackDeAlbumComponent } from './track-de-album/track-de-album.component';
 import { UsuarioVotanteListComponent } from './usuario-votante-list/usuario-votante-list.component';
 import { VotoListaComponent } from './voto-lista/voto-lista.component';
-import { MenuAdminComponent } from './menu-admin/menu-admin.component';
+import { MenuAdminComponent } from './front-admin/menu-admin/menu-admin.component';
+import { MenuAdminAlbumComponent } from './front-admin/menu-admin-album/menu-admin-album.component';
+import { MenuAdminCancionComponent } from './front-admin/menu-admin-cancion/menu-admin-cancion.component';
+import { MenuAdminGeneroComponent } from './front-admin/menu-admin-genero/menu-admin-genero.component';
+import { EditarAlbumComponent } from './front-admin/editar-album/editar-album.component';
 
 const routes: Routes = [
   { path: 'album-lista', component: AlbumListarComponent },
@@ -28,6 +30,10 @@ const routes: Routes = [
   { path: 'menu-admin', component: MenuAdminComponent},
   { path: 'menu', component: MenuClienteComponent},
   { path: 'loginAdmin', component: LoginAdminComponent},
+  { path: 'menu-admin-album', component: MenuAdminAlbumComponent},
+  { path: 'menu-admin-genero', component: MenuAdminGeneroComponent},
+  { path: 'menu-admin-cancion', component:MenuAdminCancionComponent},
+  { path: 'editar-admin-album/:id', component:EditarAlbumComponent},
   { path: '', component: LoginClienteComponent},
 
   // Si se ingresa una ruta no existente, redirecciona a 'home'

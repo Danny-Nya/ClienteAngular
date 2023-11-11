@@ -5,7 +5,7 @@ import { GeneroService } from '../service/genero.service';
 import { Album } from '../modelo/album.interface';
 import { Genero } from '../modelo/genero.interface';
 import { Recomendacion } from '../modelo/recomendacion.interface';
-import { RecomendarListaService } from '../recomendar-lista.service';
+import { RecomendacionService } from '../service/recomendacion.service';
 @Component({
   selector: 'app-recomendar-lista',
   templateUrl: './recomendar-lista.component.html',
@@ -22,7 +22,7 @@ export class RecomendarListaComponent implements OnInit{
   generoId: number = -1;
   showRecomendacion: boolean = true
 
-  constructor(private recomendarListaService: RecomendarListaService, private generoService: GeneroService,private route: ActivatedRoute){
+  constructor(private recomendacionService: RecomendacionService, private generoService: GeneroService,private route: ActivatedRoute){
 
     this.route.params.subscribe(params => {
       if (params['genero']) {
@@ -32,13 +32,13 @@ export class RecomendarListaComponent implements OnInit{
     });
   }
   ngOnInit(): void {
-    this.recomendarListaService.getAll().subscribe((data: Recomendacion[])=>{
+    this.recomendacionService.lista().subscribe((data: Recomendacion[])=>{
       console.log( data )
       this.recomendaciones = data
 
       this.matchAlbumsByGenero(this.generoId);
     },
-    (error) => {
+    (error: any) => {
       console.error('Error fetching data:', error);
     })
 
