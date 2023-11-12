@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AlbumListarComponent } from './front-admin/album-listar/album-listar.component';
-import { GeneroListaComponent } from './genero-lista/genero-lista.component';
+import { GeneroListaComponent } from './front-cliente/genero-lista/genero-lista.component';
 import { HomeComponent } from './home/home.component';
-import { RecomendarListaComponent } from './recomendar-lista/recomendar-lista.component';
+import { RecomendarListaComponent } from './front-cliente/recomendar-lista/recomendar-lista.component';
 import { RegistrarUsuarioComponent } from './front-cliente/registrar-usuario/registrar-usuario.component';
 import { MenuClienteComponent } from './front-cliente/menu-cliente/menu-cliente.component';
 import { LoginClienteComponent } from './front-cliente/login-cliente/login-cliente.component';
@@ -18,7 +18,9 @@ import { MenuAdminGeneroComponent } from './front-admin/menu-admin-genero/menu-a
 import { EditarAlbumComponent } from './front-admin/editar-album/editar-album.component';
 import { EditarCancionComponent } from './front-admin/editar-cancion/editar-cancion.component';
 import { EditarGeneroComponent } from './front-admin/editar-genero/editar-genero.component';
-
+import { MenuClienteAlbumComponent } from './front-cliente/menu-cliente-album/menu-cliente-album.component';
+import { MenuClienteCancionComponent } from './front-cliente/menu-cliente-cancion/menu-cliente-cancion.component';
+import { MenuClienteCancionDetalleComponent } from './front-cliente/menu-cliente-cancion-detalle/menu-cliente-cancion-detalle.component';
 const routes: Routes = [
   { path: 'album-lista', component: AlbumListarComponent },
   { path: 'album-lista/:id', component: TrackDeAlbumComponent},
@@ -38,6 +40,9 @@ const routes: Routes = [
   { path: 'editar-admin-album/:id', component:EditarAlbumComponent},
   { path: 'editar-admin-track/:id', component:EditarCancionComponent},
   { path: 'editar-admin-genero/:id', component:EditarGeneroComponent},
+  { path: 'menu-cliente-album', component: MenuClienteAlbumComponent},
+  { path: 'menu-cliente-cancion', component:MenuClienteCancionComponent},
+  { path: 'menu-cliente-cancion/:id', component:MenuClienteCancionDetalleComponent},
   { path: '', component: LoginClienteComponent},
 
   // Si se ingresa una ruta no existente, redirecciona a 'home'

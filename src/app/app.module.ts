@@ -16,7 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlbumListarComponent } from './front-admin/album-listar/album-listar.component';
 import { AppComponent } from './app.component';
-import { GeneroListaComponent } from './genero-lista/genero-lista.component';
+import { GeneroListaComponent } from './front-cliente/genero-lista/genero-lista.component';
 import { HomeComponent } from './home/home.component';
 import { LoginAdminFormComponent } from './front-admin/login-admin/login-admin-form.component';
 import { LoginAdminComponent } from './front-admin/login-admin/login-admin.component';
@@ -24,11 +24,10 @@ import { LoginFormComponent } from './front-cliente/login-cliente/login-cliente-
 import { LoginClienteComponent } from './front-cliente/login-cliente/login-cliente.component';
 import { MenuClienteComponent } from './front-cliente/menu-cliente/menu-cliente.component';
 import { RecomendacionService } from './service/recomendacion.service';
-import { RecomendarListaComponent } from './recomendar-lista/recomendar-lista.component';
+import { RecomendarListaComponent } from './front-cliente/recomendar-lista/recomendar-lista.component';
 import { RegistrarUsuarioComponent } from './front-cliente/registrar-usuario/registrar-usuario.component';
 import { TokenAuthComponentComponent } from './token-auth-component/token-auth-component.component';
 import { ToolBarHeaderComponent } from './tool-bar-header/tool-bar-header.component';
-import { TrackDeAlbumService } from './track-de-album.service';
 import { TrackDeAlbumComponent } from './track-de-album/track-de-album.component';
 import { UsuarioVotanteListService } from './usuario-votante-list.service';
 import { UsuarioVotanteListComponent } from './usuario-votante-list/usuario-votante-list.component';
@@ -49,6 +48,11 @@ import { TrackService } from './service/track.service';
 import { CancionListarComponent } from './front-admin/cancion-listar/cancion-listar.component';
 import { FormCancionComponent } from './front-admin/form-cancion/form-cancion.component';
 import { GeneroListarComponent } from './front-admin/genero-listar/genero-listar.component';
+import { MenuClienteGeneroComponent } from './front-cliente/menu-cliente-genero/menu-cliente-genero.component';
+import { MenuClienteAlbumComponent } from './front-cliente/menu-cliente-album/menu-cliente-album.component';
+import { MenuClienteCancionComponent } from './front-cliente/menu-cliente-cancion/menu-cliente-cancion.component';
+import { MenuClienteCancionDetalleComponent } from './front-cliente/menu-cliente-cancion-detalle/menu-cliente-cancion-detalle.component';
+import { ClienteSomeAlbumComponent } from './front-cliente/cliente-some-album/cliente-some-album.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +83,12 @@ import { GeneroListarComponent } from './front-admin/genero-listar/genero-listar
     EditarGeneroComponent,
     FormGeneroComponent,
     FormCancionComponent,
-    GeneroListarComponent
+    GeneroListarComponent,
+    MenuClienteGeneroComponent,
+    MenuClienteAlbumComponent,
+    MenuClienteCancionComponent,
+    MenuClienteCancionDetalleComponent,
+    ClienteSomeAlbumComponent
   ],
   imports: [
     BrowserModule,
@@ -104,7 +113,6 @@ import { GeneroListarComponent } from './front-admin/genero-listar/genero-listar
     UsuarioVotanteListService,
     RecomendacionService,
     VotoListaService,
-    TrackDeAlbumService,
     AlbumService,
     GeneroService,
     TrackService

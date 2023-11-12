@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { GeneroService } from '../service/genero.service';
-import { Genero } from '../modelo/genero.interface';
+import { GeneroService } from '../../service/genero.service';
+import { Genero } from '../../modelo/genero.interface';
 
 @Component({
   selector: 'app-genero-lista',

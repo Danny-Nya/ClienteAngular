@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Album } from '../modelo/album.interface';
-import { AlbumService } from '../service/album.service';
+import { Album } from 'src/app/modelo/album.interface';
+import { AlbumService } from 'src/app/service/album.service';
 
 @Component({
-  selector: 'app-track-de-album',
-  templateUrl: './track-de-album.component.html',
-  styleUrls: ['./track-de-album.component.css']
+  selector: 'app-menu-cliente-cancion',
+  templateUrl: './menu-cliente-cancion.component.html',
+  styleUrls: ['./menu-cliente-cancion.component.css']
 })
-export class TrackDeAlbumComponent implements OnInit {
+export class MenuClienteCancionComponent implements OnInit {
 
   album_id: number | null = null;
   albums: Album | null = null;
@@ -32,7 +32,3 @@ export class TrackDeAlbumComponent implements OnInit {
     });
   }
   }
-
-
-
-
