@@ -1,26 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AlbumListarComponent } from './front-admin/album-listar/album-listar.component';
-import { GeneroListaComponent } from './front-cliente/genero-lista/genero-lista.component';
+import { AlbumListarComponent } from './album-listar/album-listar.component';
+import { GeneroListaComponent } from './genero-lista/genero-lista.component';
 import { HomeComponent } from './home/home.component';
-import { RecomendarListaComponent } from './front-cliente/recomendar-lista/recomendar-lista.component';
-import { RegistrarUsuarioComponent } from './front-cliente/registrar-usuario/registrar-usuario.component';
-import { MenuClienteComponent } from './front-cliente/menu-cliente/menu-cliente.component';
-import { LoginClienteComponent } from './front-cliente/login-cliente/login-cliente.component';
-import { LoginAdminComponent } from './front-admin/login-admin/login-admin.component';
+import { RecomendarListaComponent } from './recomendar-lista/recomendar-lista.component';
+import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
+import { MenuClienteComponent } from './menu-cliente/menu-cliente.component';
+import { LoginClienteComponent } from './login-cliente/login-cliente.component';
+import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { TrackDeAlbumComponent } from './track-de-album/track-de-album.component';
 import { UsuarioVotanteListComponent } from './usuario-votante-list/usuario-votante-list.component';
 import { VotoListaComponent } from './voto-lista/voto-lista.component';
-import { MenuAdminComponent } from './front-admin/menu-admin/menu-admin.component';
-import { MenuAdminAlbumComponent } from './front-admin/menu-admin-album/menu-admin-album.component';
-import { MenuAdminCancionComponent } from './front-admin/menu-admin-cancion/menu-admin-cancion.component';
-import { MenuAdminGeneroComponent } from './front-admin/menu-admin-genero/menu-admin-genero.component';
-import { EditarAlbumComponent } from './front-admin/editar-album/editar-album.component';
-import { EditarCancionComponent } from './front-admin/editar-cancion/editar-cancion.component';
-import { EditarGeneroComponent } from './front-admin/editar-genero/editar-genero.component';
-import { MenuClienteAlbumComponent } from './front-cliente/menu-cliente-album/menu-cliente-album.component';
-import { MenuClienteCancionComponent } from './front-cliente/menu-cliente-cancion/menu-cliente-cancion.component';
-import { MenuClienteCancionDetalleComponent } from './front-cliente/menu-cliente-cancion-detalle/menu-cliente-cancion-detalle.component';
+import { MenuAdminComponent } from './menu-admin/menu-admin.component';
+import { MenuAdminAlbumComponent } from './menu-admin-album/menu-admin-album.component';
+import { MenuAdminCancionComponent } from './menu-admin-cancion/menu-admin-cancion.component';
+import { MenuAdminGeneroComponent } from './menu-admin-genero/menu-admin-genero.component';
+import { EditarAlbumComponent } from './editar-album/editar-album.component';
+import { EditarCancionComponent } from './editar-cancion/editar-cancion.component';
+import { EditarGeneroComponent } from './editar-genero/editar-genero.component';
+import { MenuClienteAlbumComponent } from './menu-cliente-album/menu-cliente-album.component';
+import { MenuClienteCancionComponent } from './menu-cliente-cancion/menu-cliente-cancion.component';
+import { MenuClienteCancionDetalleComponent } from './menu-cliente-cancion-detalle/menu-cliente-cancion-detalle.component';
 const routes: Routes = [
   { path: 'album-lista', component: AlbumListarComponent },
   { path: 'album-lista/:id', component: TrackDeAlbumComponent},
