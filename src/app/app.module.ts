@@ -18,9 +18,7 @@ import { AlbumListarComponent } from './album-listar/album-listar.component';
 import { AppComponent } from './app.component';
 import { GeneroListaComponent } from './genero-lista/genero-lista.component';
 import { HomeComponent } from './home/home.component';
-import { LoginAdminFormComponent } from './login-admin/login-admin-form.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
-import { LoginFormComponent } from './login-cliente/login-cliente-form.component';
 import { LoginClienteComponent } from './login-cliente/login-cliente.component';
 import { MenuClienteComponent } from './menu-cliente/menu-cliente.component';
 import { RecomendacionService } from './service/recomendacion.service';
@@ -64,11 +62,9 @@ import { ClienteSomeAlbumComponent } from './cliente-some-album/cliente-some-alb
     CancionListarComponent,
     VotoListaComponent,
     RegistrarUsuarioComponent,
-    LoginFormComponent,
     MenuClienteComponent,
     LoginClienteComponent,
     LoginAdminComponent,
-    LoginAdminFormComponent,
     HomeComponent,
     ToolBarHeaderComponent,
     TrackDeAlbumComponent,
