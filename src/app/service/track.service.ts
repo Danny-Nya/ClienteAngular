@@ -15,10 +15,6 @@ export class TrackService {
     return this.httpClient.get<Track[]>(this.TrackURL +`/Lista`);
   }
 
-  public listaid(id:Number): Observable<Track[]> {
-    return this.httpClient.get<Track[]>(this.TrackURL +`/Lista/${id}`);
-  }
-
   public detail(id: number): Observable<Track> {
     return this.httpClient.get<Track>(this.TrackURL +`/Buscar/${id}`);
   }

@@ -1,20 +1,30 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, catchError, throwError } from 'rxjs';
 
 @Injectable()
-export class TokenService {
-  private apiUrl = 'http://localhost:8081/public/autenticacion-usuario';
+export class TokenAuthService {
+
 
   constructor(private http: HttpClient) {}
 
-  createToken(data: any): Observable<any> {
-
+  createToken(correo: string, contrasena: string): Observable<any> {
     const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer your_jwt_token_here',
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': 'Bearer'
     });
 
-    return this.http.post(this.apiUrl, data, { headers });
+    const body = new URLSearchParams();
+    body.set('correo', correo);
+    body.set('contrasena', contrasena);
+
+
+    return this.http.post('/public/autenticacion-usuario', body.toString(), {headers})
+    .pipe(
+      catchError((error: any) => {
+        console.error('Error occurred:', error);
+        return throwError(error);
+      })
+    );
   }
 }
