@@ -9,7 +9,7 @@
       <p>Album: {{track.album.name}}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button class="btn-outline" mat-stroked-button [routerLink]="['/track', track.track_id]">Ver track</button>
+      <button class="btn-outline" mat-stroked-button [routerLink]="['/menu-cliente-cancion-detalle', track.track_id]">Ver track</button>
       <button class="btn-outline-warning" mat-stroked-button routerLink="/editar-admin-track/{{track.track_id}}">
         Editar</button>
       <button class="btn-outline-danger" mat-stroked-button (click)="borrar(track.track_id)"> Eliminar</button>

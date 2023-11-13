@@ -50,7 +50,7 @@ console.log(decodedPayload);
             (postResponse) => {
               console.log('Post Response', postResponse);
               localStorage.removeItem('jwtToken');
-              this.router.navigate(['album-lista'])
+              this.router.navigate(['menu'])
             },
             (postError) => {
               console.log('Post Error', postError);

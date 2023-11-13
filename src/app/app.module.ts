@@ -44,12 +44,15 @@ import { TrackService } from './service/track.service';
 import { TokenAuthService } from './token-auth.service';
 import { TokenPostBackendService } from './token-post-backend.service';
 import { ToolBarHeaderComponent } from './tool-bar-header/tool-bar-header.component';
-import { TrackDeAlbumService } from './track-de-album.service';
-import { TrackDeAlbumComponent } from './track-de-album/track-de-album.component';
 import { UsuarioVotanteListService } from './usuario-votante-list.service';
 import { UsuarioVotanteListComponent } from './usuario-votante-list/usuario-votante-list.component';
 import { VotoListaService } from './voto-lista.service';
 import { VotoListaComponent } from './voto-lista/voto-lista.component';
+import { ClienteSomeAlbumComponent } from './front-cliente/cliente-some-album/cliente-some-album.component';
+import { MenuClienteAlbumComponent } from './front-cliente/menu-cliente-album/menu-cliente-album.component';
+import { MenuClienteCancionComponent } from './front-cliente/menu-cliente-cancion/menu-cliente-cancion.component';
+import { MenuClienteCancionDetalleComponent } from './front-cliente/menu-cliente-cancion-detalle/menu-cliente-cancion-detalle.component';
+import { MenuClienteGeneroComponent } from './front-cliente/menu-cliente-genero/menu-cliente-genero.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +70,6 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     LoginAdminFormComponent,
     HomeComponent,
     ToolBarHeaderComponent,
-    TrackDeAlbumComponent,
     MenuAdminComponent,
     MenuAdminAlbumComponent,
     MenuAdminGeneroComponent,
@@ -79,9 +81,14 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     FormGeneroComponent,
     FormCancionComponent,
     GeneroListarComponent,
-    RegistrarUsuarioComponent
-
+    RegistrarUsuarioComponent,
+    MenuClienteGeneroComponent,
+    MenuClienteAlbumComponent,
+    MenuClienteCancionComponent,
+    MenuClienteCancionDetalleComponent,
+    ClienteSomeAlbumComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -105,7 +112,6 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     UsuarioVotanteListService,
     RecomendacionService,
     VotoListaService,
-    TrackDeAlbumService,
     AlbumService,
     GeneroService,
     TrackService,
