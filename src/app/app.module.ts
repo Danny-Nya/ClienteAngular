@@ -15,8 +15,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { JWT_OPTIONS, JwtHelperService, JwtModule } from '@auth0/angular-jwt';
 import { AlbumListarComponent } from './album-listar/album-listar.component';
 import { AppComponent } from './app.component';
+import { ObtenerRolesService } from './autenticacionYRegistro/obtener-roles.service';
 import { TokenAuthService } from './autenticacionYRegistro/token-auth.service';
 import { TokenPostBackendService } from './autenticacionYRegistro/token-post-backend.service';
 import { GeneroListaComponent } from './genero-lista/genero-lista.component';
@@ -39,6 +41,7 @@ import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario
 import { TokenAuthComponentComponent } from './token-auth-component/token-auth-component.component';
 import { ToolBarHeaderComponent } from './tool-bar-header/tool-bar-header.component';
 import { TrackDeAlbumComponent } from './track-de-album/track-de-album.component';
+import { UserPageComponent } from './user-page/user-page.component';
 import { UsuarioVotanteListComponent } from './usuario-votante-list/usuario-votante-list.component';
 import { VotoListaComponent } from './voto-lista/voto-lista.component';
 
@@ -62,6 +65,7 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     ToolBarHeaderComponent,
     TrackDeAlbumComponent,
     TokenAuthComponentComponent,
+    UserPageComponent
 
   ],
   imports: [
@@ -80,7 +84,8 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     MatListModule,
     MatButtonModule,
     MatTooltipModule,
-    MatIconModule
+    MatIconModule,
+    JwtModule
 
   ],
   providers: [
@@ -92,7 +97,10 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     RegistrarUsuarioService,
     TrackDeAlbumService,
     TokenAuthService,
-    TokenPostBackendService
+    TokenPostBackendService,
+    ObtenerRolesService,
+    { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
+    JwtHelperService
   ],
 
   bootstrap: [AppComponent]

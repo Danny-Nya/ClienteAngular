@@ -1,0 +1,10 @@
+<p>user-page works!</p>
+<mat-card *ngIf="userInfo" class="user-info-container">
+  <mat-card-content>
+    <h2>Welcome, {{ userInfo['nombre del perfil'] }}!</h2>
+    <p>Email: {{ userInfo.correo }}</p>
+    <p>Name: {{ userInfo.nombre }}</p>
+    <!-- Add more fields as needed -->
+  </mat-card-content>
+</mat-card>
+

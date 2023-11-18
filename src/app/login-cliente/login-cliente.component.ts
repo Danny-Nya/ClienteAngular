@@ -49,7 +49,7 @@ console.log(decodedPayload);
           this.postToken.sendPostRequestWithToken(jwtToken).subscribe(
             (postResponse) => {
               console.log('Post Response', postResponse);
-              localStorage.removeItem('jwtToken');
+
               this.router.navigate(['album-lista'])
             },
             (postError) => {
