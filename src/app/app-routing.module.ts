@@ -33,7 +33,7 @@ const routes: Routes = [
   {path: '', component: LoginClienteComponent},
   {path: 'user-page', component: UserPageComponent},
   {path: 'admin/menu-admin-genero', component: MenuAdminGeneroComponent},
-  {path: 'admin/menu-admin-album', component: MenuAdminAlbumComponent}
+  {path: 'admin/menu-admin-album', component: MenuAdminAlbumComponent},
   // Si se ingresa una ruta no existente, redirecciona a 'home'
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 
