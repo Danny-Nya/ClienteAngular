@@ -10,6 +10,8 @@ import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { LoginClienteComponent } from './login-cliente/login-cliente.component';
 import { MenuClienteComponent } from './menu-cliente/menu-cliente.component';
 
+import { MenuAdminAlbumComponent } from './menu-admin/menu-admin-album/menu-admin-album.component';
+import { MenuAdminGeneroComponent } from './menu-admin/menu-admin-genero/menu-admin-genero.component';
 import { TrackDeAlbumComponent } from './track-de-album/track-de-album.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { UsuarioVotanteListComponent } from './usuario-votante-list/usuario-votante-list.component';
@@ -30,9 +32,11 @@ const routes: Routes = [
 {path: 'loginAdmin', component: LoginAdminComponent},
   {path: '', component: LoginClienteComponent},
   {path: 'user-page', component: UserPageComponent},
-
+  {path: 'admin/menu-admin-genero', component: MenuAdminGeneroComponent},
+  {path: 'admin/menu-admin-album', component: MenuAdminAlbumComponent},
   // Si se ingresa una ruta no existente, redirecciona a 'home'
-  { path: '**', redirectTo: 'home', pathMatch: 'full' }
+  { path: '**', redirectTo: 'home', pathMatch: 'full' },
+
 ];
 
 @NgModule({
