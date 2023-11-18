@@ -60,6 +60,8 @@ import { FormAlbumComponent } from './menu-admin/form-album/form-album.component
 import { FormCancionComponent } from './menu-admin/form-cancion/form-cancion.component';
 import { FormGeneroComponent } from './menu-admin/form-genero/form-genero.component';
 import { GeneroListarAdminComponent } from './menu-admin/genero-listar-admin/genero-listar-admin.component';
+import { MenuAdminAlbumComponent } from './menu-admin/menu-admin-album/menu-admin-album.component';
+import { MenuAdminGeneroComponent } from './menu-admin/menu-admin-genero/menu-admin-genero.component';
 
 @NgModule({
   declarations: [
@@ -89,7 +91,9 @@ import { GeneroListarAdminComponent } from './menu-admin/genero-listar-admin/gen
     FormAlbumComponent,
     FormCancionComponent,
     FormGeneroComponent,
-    GeneroListarAdminComponent
+    GeneroListarAdminComponent,
+    MenuAdminAlbumComponent,
+    MenuAdminGeneroComponent
 
   ],
   imports: [
