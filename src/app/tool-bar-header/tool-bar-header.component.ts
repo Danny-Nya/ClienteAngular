@@ -11,7 +11,7 @@ export class ToolBarHeaderComponent {
   constructor(private router: Router) {}
 
 navigateToGeneroLista() {
-  this.router.navigate(['/genero-lista']);
+  this.router.navigate(['/cliente/genero-lista']);
 }
 
 navigateToRegistroDeUsuario() {
@@ -19,7 +19,7 @@ navigateToRegistroDeUsuario() {
 }
 
 navigateToBuscarAlbumes() {
-  this.router.navigate(['/album-lista']);
+  this.router.navigate(['/cliente/album-lista']);
 }
 
 }

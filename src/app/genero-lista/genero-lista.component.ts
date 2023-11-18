@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { GeneroListaService } from '../genero-lista.service';
+import { GeneroListaService } from '../listarService/genero-lista.service';
 import { Genero } from '../modelo/genero.interface';
 
 @Component({
@@ -26,7 +26,7 @@ export class GeneroListaComponent implements OnInit {
 
   handleGeneroClick(genero: Genero) {
     this.clickedGenero = genero;
-    this.router.navigate(['/recomendar-lista', {genero: genero.id}]);
+    this.router.navigate(['/cliente/recomendar-lista', {genero: genero.id}]);
   }
 
 }

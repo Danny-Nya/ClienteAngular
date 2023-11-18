@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { TrackDeAlbumService } from '../listarService/track-de-album.service';
 import { Album } from '../modelo/album.interface';
-import { TrackDeAlbumService } from '../track-de-album.service';
 
 @Component({
   selector: 'app-track-de-album',

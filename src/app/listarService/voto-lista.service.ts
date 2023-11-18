@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Voto } from './modelo/voto.interface';
+import { Voto } from '../modelo/voto.interface';
 
 @Injectable()
 export class VotoListaService {

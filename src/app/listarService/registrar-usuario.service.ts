@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { UsuarioVotante } from './modelo/usuarioVotante.interface';
+import { UsuarioVotante } from '../modelo/usuarioVotante.interface';
 
 @Injectable()
 export class RegistrarUsuarioService {

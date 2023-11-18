@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { TokenAuthService } from '../token-auth.service';
-import { TokenPostBackendService } from '../token-post-backend.service';
+import { TokenAuthService } from '../autenticacionYRegistro/token-auth.service';
+import { TokenPostBackendService } from '../autenticacionYRegistro/token-post-backend.service';
 
 @Component({
   selector: 'app-login-cliente',
