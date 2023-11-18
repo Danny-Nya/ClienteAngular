@@ -44,7 +44,13 @@ import { TrackDeAlbumComponent } from './track-de-album/track-de-album.component
 import { UserPageComponent } from './user-page/user-page.component';
 import { UsuarioVotanteListComponent } from './usuario-votante-list/usuario-votante-list.component';
 import { VotoListaComponent } from './voto-lista/voto-lista.component';
-
+import { AlbumService } from './objetoServices/album.service';
+import { GeneroService } from './objetoServices/genero.service';
+import { UsuarioVotanteService } from './objetoServices/usuario-votante.service';
+import { TrackService } from './objetoServices/track.service';
+import { VotoService } from './objetoServices/voto.service';
+import { RecomendacionService } from './objetoServices/recomendacion.service';
+import { AdminService } from './objetoServices/admin.service';
 
 @NgModule({
   declarations: [
@@ -100,7 +106,14 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     TokenPostBackendService,
     ObtenerRolesService,
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
-    JwtHelperService
+    JwtHelperService,
+    AdminService,
+    AlbumService,
+    GeneroService,
+    TrackService,
+    UsuarioVotanteService,
+    RecomendacionService,
+    VotoService
   ],
 
   bootstrap: [AppComponent]
