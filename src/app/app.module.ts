@@ -51,6 +51,15 @@ import { TrackService } from './objetoServices/track.service';
 import { VotoService } from './objetoServices/voto.service';
 import { RecomendacionService } from './objetoServices/recomendacion.service';
 import { AdminService } from './objetoServices/admin.service';
+import { CancionListarComponent } from './menu-admin/cancion-listar/cancion-listar.component';
+import { AlbumListarAdminComponent } from './menu-admin/album-listar-admin/album-listar-admin.component';
+import { EditarAlbumComponent } from './menu-admin/editar-album/editar-album.component';
+import { EditarCancionComponent } from './menu-admin/editar-cancion/editar-cancion.component';
+import { EditarGeneroComponent } from './menu-admin/editar-genero/editar-genero.component';
+import { FormAlbumComponent } from './menu-admin/form-album/form-album.component';
+import { FormCancionComponent } from './menu-admin/form-cancion/form-cancion.component';
+import { FormGeneroComponent } from './menu-admin/form-genero/form-genero.component';
+import { GeneroListarAdminComponent } from './menu-admin/genero-listar-admin/genero-listar-admin.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +80,16 @@ import { AdminService } from './objetoServices/admin.service';
     ToolBarHeaderComponent,
     TrackDeAlbumComponent,
     TokenAuthComponentComponent,
-    UserPageComponent
+    UserPageComponent,
+    CancionListarComponent,
+    AlbumListarAdminComponent,
+    EditarAlbumComponent,
+    EditarCancionComponent,
+    EditarGeneroComponent,
+    FormAlbumComponent,
+    FormCancionComponent,
+    FormGeneroComponent,
+    GeneroListarAdminComponent
 
   ],
   imports: [
