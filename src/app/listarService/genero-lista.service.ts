@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { Genero } from './modelo/genero.interface';
+import { Genero } from '../modelo/genero.interface';
 
 @Injectable()
 export class GeneroListaService {

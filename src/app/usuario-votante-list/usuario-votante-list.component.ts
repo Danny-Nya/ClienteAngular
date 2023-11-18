@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuarioVotanteListService } from '../usuario-votante-list.service';
+import { UsuarioVotanteListService } from '../listarService/usuario-votante-list.service';
 
 @Component({
   selector: 'app-usuario-votante-list',

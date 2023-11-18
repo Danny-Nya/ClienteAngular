@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError } from 'rxjs';
-import { Recomendacion } from './modelo/recomendacion.interface';
+import { Recomendacion } from '../modelo/recomendacion.interface';
 
 @Injectable()
 export class RecomendarListaService {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlbumListarService } from '../album-listar.service';
+import { AlbumListarService } from '../listarService/album-listar.service';
 import { Album } from '../modelo/album.interface';
 
 @Component({

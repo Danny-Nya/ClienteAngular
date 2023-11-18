@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Album } from './modelo/album.interface';
+import { Album } from '../modelo/album.interface';
 
 @Injectable()
 export class TrackDeAlbumService {

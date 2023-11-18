@@ -5,7 +5,6 @@ import { Observable, throwError } from 'rxjs';
 @Injectable()
 export class TokenPostBackendService {
 
-
   constructor(private http: HttpClient) { }
 
   sendPostRequestWithToken(payload: any): Observable<any> {

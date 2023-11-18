@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { VotoListaService } from '../listarService/voto-lista.service';
 import { Voto } from '../modelo/voto.interface';
-import { VotoListaService } from '../voto-lista.service';
 @Component({
   selector: 'app-voto-lista',
   templateUrl: './voto-lista.component.html',

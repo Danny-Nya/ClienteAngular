@@ -1,25 +1,67 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ObtenerRolesService } from '../autenticacionYRegistro/obtener-roles.service';
 
 @Component({
   selector: 'app-tool-bar-header',
   templateUrl: './tool-bar-header.component.html',
   styleUrls: ['./tool-bar-header.component.css']
 })
-export class ToolBarHeaderComponent {
+export class ToolBarHeaderComponent implements OnInit{
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: ObtenerRolesService) {}
+  ngOnInit(): void {
+
+    const userRoles = this.authService.getRoles();
+    console.log(userRoles);
+
+    if (userRoles && userRoles.length > 0) {
+
+      if(userRoles.includes('Prueba')){
+
+        console.log('rol Prueba');
+      }
+
+    }
+
+  }
 
 navigateToGeneroLista() {
-  this.router.navigate(['/genero-lista']);
+
+  const userRoles = this.authService.getRoles();
+  console.log(userRoles);
+
+   if (userRoles && userRoles.length > 0) {
+      if (userRoles.includes('Prueba')) {
+        this.router.navigate(['/cliente/genero-lista']);
+      } else {
+
+        console.error('User does not have the required role for this action');
+      }
+    }
 }
 
 navigateToRegistroDeUsuario() {
+  const userRoles = this.authService.getRoles();
+  console.log(userRoles);
+
+  if(userRoles.length == 0){
   this.router.navigate(['/registrar-usuario']);
+  }else{
+    this.router.navigate(['/user-page'])
+  }
 }
 
 navigateToBuscarAlbumes() {
-  this.router.navigate(['/album-lista']);
-}
+  const userRoles = this.authService.getRoles();
+  console.log(userRoles);
+
+  if (userRoles && userRoles.length > 0) {
+     if (userRoles.includes('Prueba')) {
+  this.router.navigate(['/cliente/album-lista']);
+     }else{
+      console.error('User does not have the required role for this action');
+     }
+}}
 
 }

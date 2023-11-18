@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { GeneroListaService } from '../genero-lista.service';
+import { GeneroListaService } from '../listarService/genero-lista.service';
+import { RecomendarListaService } from '../listarService/recomendar-lista.service';
 import { Album } from '../modelo/album.interface';
 import { Genero } from '../modelo/genero.interface';
 import { Recomendacion } from '../modelo/recomendacion.interface';
-import { RecomendarListaService } from '../recomendar-lista.service';
 @Component({
   selector: 'app-recomendar-lista',
   templateUrl: './recomendar-lista.component.html',
