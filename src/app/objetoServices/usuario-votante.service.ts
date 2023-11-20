@@ -2,9 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { UsuarioVotante } from '../modelo/usuarioVotante.interface';
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class UsuarioVotanteService {
 
   UsuarioURL = 'http://localhost:8080/UsuarioVotante';

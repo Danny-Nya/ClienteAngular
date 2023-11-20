@@ -14,8 +14,21 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JWT_OPTIONS, JwtHelperService, JwtModule } from '@auth0/angular-jwt';
+import { AlbumListarAdminComponent } from './admin/album-listar-admin/album-listar-admin.component';
+import { CancionListarComponent } from './admin/cancion-listar/cancion-listar.component';
+import { EditarAlbumComponent } from './admin/editar-album/editar-album.component';
+import { EditarCancionComponent } from './admin/editar-cancion/editar-cancion.component';
+import { EditarGeneroComponent } from './admin/editar-genero/editar-genero.component';
+import { FormAlbumComponent } from './admin/form-album/form-album.component';
+import { FormCancionComponent } from './admin/form-cancion/form-cancion.component';
+import { FormGeneroComponent } from './admin/form-genero/form-genero.component';
+import { GeneroListarAdminComponent } from './admin/genero-listar-admin/genero-listar-admin.component';
+import { MenuAdminAlbumComponent } from './admin/menu-admin-album/menu-admin-album.component';
+import { MenuAdminGeneroComponent } from './admin/menu-admin-genero/menu-admin-genero.component';
+import { MenuAdminComponent } from './admin/menu-admin/menu-admin.component';
 import { AlbumListarComponent } from './album-listar/album-listar.component';
 import { AppComponent } from './app.component';
 import { ObtenerRolesService } from './autenticacionYRegistro/obtener-roles.service';
@@ -35,6 +48,13 @@ import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { LoginFormComponent } from './login-cliente/login-cliente-form.component';
 import { LoginClienteComponent } from './login-cliente/login-cliente.component';
 import { MenuClienteComponent } from './menu-cliente/menu-cliente.component';
+import { AdminService } from './objetoServices/admin.service';
+import { AlbumService } from './objetoServices/album.service';
+import { GeneroService } from './objetoServices/genero.service';
+import { RecomendacionService } from './objetoServices/recomendacion.service';
+import { TrackService } from './objetoServices/track.service';
+import { UsuarioVotanteService } from './objetoServices/usuario-votante.service';
+import { VotoService } from './objetoServices/voto.service';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { RecomendarListaComponent } from './recomendar-lista/recomendar-lista.component';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
@@ -44,25 +64,6 @@ import { TrackDeAlbumComponent } from './track-de-album/track-de-album.component
 import { UserPageComponent } from './user-page/user-page.component';
 import { UsuarioVotanteListComponent } from './usuario-votante-list/usuario-votante-list.component';
 import { VotoListaComponent } from './voto-lista/voto-lista.component';
-import { AlbumService } from './objetoServices/album.service';
-import { GeneroService } from './objetoServices/genero.service';
-import { UsuarioVotanteService } from './objetoServices/usuario-votante.service';
-import { TrackService } from './objetoServices/track.service';
-import { VotoService } from './objetoServices/voto.service';
-import { RecomendacionService } from './objetoServices/recomendacion.service';
-import { AdminService } from './objetoServices/admin.service';
-import { CancionListarComponent } from './menu-admin/cancion-listar/cancion-listar.component';
-import { AlbumListarAdminComponent } from './menu-admin/album-listar-admin/album-listar-admin.component';
-import { EditarAlbumComponent } from './menu-admin/editar-album/editar-album.component';
-import { EditarCancionComponent } from './menu-admin/editar-cancion/editar-cancion.component';
-import { EditarGeneroComponent } from './menu-admin/editar-genero/editar-genero.component';
-import { FormAlbumComponent } from './menu-admin/form-album/form-album.component';
-import { FormCancionComponent } from './menu-admin/form-cancion/form-cancion.component';
-import { FormGeneroComponent } from './menu-admin/form-genero/form-genero.component';
-import { GeneroListarAdminComponent } from './menu-admin/genero-listar-admin/genero-listar-admin.component';
-import { MenuAdminAlbumComponent } from './menu-admin/menu-admin-album/menu-admin-album.component';
-import { MenuAdminGeneroComponent } from './menu-admin/menu-admin-genero/menu-admin-genero.component';
-import { MenuAdminComponent } from './menu-admin/menu-admin/menu-admin.component';
 
 @NgModule({
   declarations: [
@@ -119,6 +120,7 @@ import { MenuAdminComponent } from './menu-admin/menu-admin/menu-admin.component
 
   ],
   providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
     GeneroListaService,
     UsuarioVotanteListService,
     AlbumListarService,

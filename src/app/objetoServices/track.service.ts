@@ -2,9 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Track } from '../modelo/track.interface';
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class TrackService {
 
   TrackURL = 'http://localhost:8080/Track';
