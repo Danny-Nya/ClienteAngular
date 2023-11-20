@@ -62,6 +62,7 @@ import { FormGeneroComponent } from './menu-admin/form-genero/form-genero.compon
 import { GeneroListarAdminComponent } from './menu-admin/genero-listar-admin/genero-listar-admin.component';
 import { MenuAdminAlbumComponent } from './menu-admin/menu-admin-album/menu-admin-album.component';
 import { MenuAdminGeneroComponent } from './menu-admin/menu-admin-genero/menu-admin-genero.component';
+import { MenuAdminComponent } from './menu-admin/menu-admin/menu-admin.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +94,8 @@ import { MenuAdminGeneroComponent } from './menu-admin/menu-admin-genero/menu-ad
     FormGeneroComponent,
     GeneroListarAdminComponent,
     MenuAdminAlbumComponent,
-    MenuAdminGeneroComponent
+    MenuAdminGeneroComponent,
+    MenuAdminComponent
 
   ],
   imports: [

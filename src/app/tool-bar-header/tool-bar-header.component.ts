@@ -34,7 +34,9 @@ navigateToGeneroLista() {
    if (userRoles && userRoles.length > 0) {
       if (userRoles.includes('Prueba')) {
         this.router.navigate(['/cliente/genero-lista']);
-      } else {
+      } else if(userRoles.includes('Admin')) {
+        this.router.navigate(['admin/menu-admin-genero'])
+      }else{
 
         console.error('User does not have the required role for this action');
       }
@@ -59,6 +61,8 @@ navigateToBuscarAlbumes() {
   if (userRoles && userRoles.length > 0) {
      if (userRoles.includes('Prueba')) {
   this.router.navigate(['/cliente/album-lista']);
+     }else if(userRoles.includes('Admin')){
+      this.router.navigate(['admin/menu-admin-album'])
      }else{
       console.error('User does not have the required role for this action');
      }
