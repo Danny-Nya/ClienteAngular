@@ -27,5 +27,25 @@ export class TokenAuthService {
       })
     );
   }
+
+  createAdminToken(correo: string, contrasena: string): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': 'Bearer'
+    });
+
+    const body = new URLSearchParams();
+    body.set('correo', correo);
+    body.set('contrasena', contrasena);
+
+
+    return this.http.post('/admin/autenticacion-usuario', body.toString(), {headers})
+    .pipe(
+      catchError((error: any) => {
+        console.error('Error occurred:', error);
+        return throwError(error);
+      })
+    );
+  }
 }
 
