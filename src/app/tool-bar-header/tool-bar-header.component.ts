@@ -62,7 +62,7 @@ navigateToBuscarAlbumes() {
      if (userRoles.includes('Prueba')) {
   this.router.navigate(['/cliente/album-lista']);
      }else if(userRoles.includes('Admin')){
-      this.router.navigate(['admin/menu-admin-album'])
+      this.router.navigate(['/admin/menu-admin'])
      }else{
       console.error('User does not have the required role for this action');
      }

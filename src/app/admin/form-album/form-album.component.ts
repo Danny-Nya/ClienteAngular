@@ -33,11 +33,11 @@ export class FormAlbumComponent implements OnInit {
       console.log(albumData)
       this.albumService.save(albumData).subscribe(
         (response) => {
-          console.log('se agrego album')
+          console.log('se agrego album', response)
           window.location.reload();
         },
         (error) => {
-        console.error('error fetching data')
+        console.error('error fetching data', error)
         }
       );
     }
