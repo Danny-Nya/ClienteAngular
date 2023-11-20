@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TokenPostBackendService } from '../autenticacionYRegistro/token-post-backend.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { TokenPostBackendService } from '../autenticacionYRegistro/token-post-ba
 export class UserPageComponent implements OnInit{
 
   userInfo: any;
-  constructor(private postBackendAuthService: TokenPostBackendService){}
+  constructor(private postBackendAuthService: TokenPostBackendService, private router: Router){}
   ngOnInit(): void {
 
 
@@ -28,6 +29,16 @@ export class UserPageComponent implements OnInit{
 
         }
       );
+
+
+  }
+
+  logout(): void {
+
+    localStorage.removeItem('jwtToken');
+
+
+    this.router.navigate(['/home']);
   }
 
 

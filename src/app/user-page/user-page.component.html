@@ -4,7 +4,8 @@
     <h2>Welcome, {{ userInfo['nombre del perfil'] }}!</h2>
     <p>Email: {{ userInfo.correo }}</p>
     <p>Name: {{ userInfo.nombre }}</p>
-    <!-- Add more fields as needed -->
+
+    <button mat-button color="primary" (click)="logout()">Logout</button>
   </mat-card-content>
 </mat-card>
 
