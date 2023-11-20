@@ -11,6 +11,8 @@ import { LoginClienteComponent } from './login-cliente/login-cliente.component';
 import { MenuClienteComponent } from './menu-cliente/menu-cliente.component';
 
 import { AlbumListarAdminComponent } from './admin/album-listar-admin/album-listar-admin.component';
+import { EditarAlbumComponent } from './admin/editar-album/editar-album.component';
+import { EditarGeneroComponent } from './admin/editar-genero/editar-genero.component';
 import { FormAlbumComponent } from './admin/form-album/form-album.component';
 import { MenuAdminAlbumComponent } from './admin/menu-admin-album/menu-admin-album.component';
 import { MenuAdminGeneroComponent } from './admin/menu-admin-genero/menu-admin-genero.component';
@@ -35,6 +37,8 @@ const routes: Routes = [
 {path: 'loginAdmin', component: LoginAdminComponent},
   {path: '', component: LoginClienteComponent},
   {path: 'user-page', component: UserPageComponent},
+  {path: 'admin/editar-album/:id', component: EditarAlbumComponent},
+  {path: 'admin/editar-genero/:id', component: EditarGeneroComponent},
   {path: 'admin/agregar-album', component: FormAlbumComponent},
   {path: 'admin/album-listar-admin', component: AlbumListarAdminComponent},
   {path: 'admin/menu-admin-genero', component: MenuAdminGeneroComponent},
