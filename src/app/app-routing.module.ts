@@ -33,9 +33,9 @@ const routes: Routes = [
 {path: 'loginAdmin', component: LoginAdminComponent},
   {path: '', component: LoginClienteComponent},
   {path: 'user-page', component: UserPageComponent},
-  {path: 'menu-admin-genero', component: MenuAdminGeneroComponent},
-  {path: 'menu-admin-album', component: MenuAdminAlbumComponent},
-  {path: 'menu-admin', component: MenuAdminComponent},
+  {path: 'admin/menu-admin-genero', component: MenuAdminGeneroComponent},
+  {path: 'admin/menu-admin-album', component: MenuAdminAlbumComponent},
+  {path: 'admin/menu-admin', component: MenuAdminComponent},
   // Si se ingresa una ruta no existente, redirecciona a 'home'
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 
