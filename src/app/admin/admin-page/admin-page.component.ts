@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { TokenPostBackendService } from '../autenticacionYRegistro/token-post-backend.service';
+import { TokenPostBackendService } from 'src/app/autenticacionYRegistro/token-post-backend.service';
 
 @Component({
-  selector: 'app-user-page',
-  templateUrl: './user-page.component.html',
-  styleUrls: ['./user-page.component.css']
+  selector: 'app-admin-page',
+  templateUrl: './admin-page.component.html',
+  styleUrls: ['./admin-page.component.css']
 })
-export class UserPageComponent implements OnInit{
+export class AdminPageComponent implements OnInit{
 
   userInfo: any;
   constructor(private postBackendAuthService: TokenPostBackendService, private router: Router){}
@@ -17,7 +17,7 @@ export class UserPageComponent implements OnInit{
 
     const token = localStorage.getItem('jwtToken') || '';
 
-    this.postBackendAuthService.sendPostRequestWithToken(token)
+    this.postBackendAuthService.sendPostRequestWithTokenAdmin(token)
       .subscribe(
         (response) => {
 
@@ -43,7 +43,4 @@ export class UserPageComponent implements OnInit{
 
 
   }
-
-
-
 

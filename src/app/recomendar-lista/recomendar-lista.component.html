@@ -1,6 +1,12 @@
-
+<app-select-album (albumSelected)="onAlbumSelected($event)"></app-select-album>
 <div *ngFor="let album of albums" class="album-container">
-  <div>
-  <h2>{{album.name}}</h2>
-</div>
+  <mat-card>
+    <mat-card-content>
+      <h2>{{ album.name }}</h2>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-stroked-button [routerLink]="['/cliente/album-lista', album.album_id]">View Album</button>
+    </mat-card-actions>
+  </mat-card>
 </div>

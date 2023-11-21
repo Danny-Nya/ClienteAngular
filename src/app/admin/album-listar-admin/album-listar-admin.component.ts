@@ -37,11 +37,11 @@ export class AlbumListarAdminComponent implements OnInit {
   borrar(id: number) {
     this.albumService.delete(id).subscribe(
       (response) => {
-        console.log('se borro album')
+        console.log('se borro album', response)
         window.location.reload();
       },
       (error) => {
-        console.error('error fetching data')
+        console.error('error fetching data', error)
       }
     );
 

@@ -14,8 +14,8 @@
       <p>Genres: {{ album.genres }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button class="btn-outline" mat-stroked-button [routerLink]="['/album-lista', album.album_id]">Ver Album</button>
-      <button class="btn-outline-warning" mat-stroked-button routerLink="/editar-admin-album/{{album.album_id}}">
+      <button class="btn-outline" mat-stroked-button [routerLink]="['/admin/album-lista', album.album_id]">Ver Album</button>
+      <button class="btn-outline-warning" mat-stroked-button routerLink="/admin/editar-album/{{album.album_id}}">
         Editar</button>
       <button class="btn-outline-danger" mat-stroked-button (click)="borrar(album.album_id)"> Eliminar</button>
     </mat-card-actions>

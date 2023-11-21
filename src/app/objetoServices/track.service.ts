@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Track } from '../modelo/track.interface';
+import { TrackDTO } from '../modelo/trackDTO.interface';
 @Injectable()
 export class TrackService {
 
@@ -17,7 +18,7 @@ export class TrackService {
     return this.httpClient.get<Track>(this.TrackURL +`/Buscar/${id}`);
   }
 
-  public save(producto: Track): Observable<any> {
+  public save(producto: TrackDTO): Observable<any> {
     return this.httpClient.post<any>(this.TrackURL +`/Agregar`, producto);
   }
 

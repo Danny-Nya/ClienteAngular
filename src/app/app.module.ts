@@ -15,8 +15,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JWT_OPTIONS, JwtHelperService, JwtModule } from '@auth0/angular-jwt';
+import { AdminPageComponent } from './admin/admin-page/admin-page.component';
 import { AlbumListarAdminComponent } from './admin/album-listar-admin/album-listar-admin.component';
 import { CancionListarComponent } from './admin/cancion-listar/cancion-listar.component';
 import { EditarAlbumComponent } from './admin/editar-album/editar-album.component';
@@ -27,8 +29,11 @@ import { FormCancionComponent } from './admin/form-cancion/form-cancion.componen
 import { FormGeneroComponent } from './admin/form-genero/form-genero.component';
 import { GeneroListarAdminComponent } from './admin/genero-listar-admin/genero-listar-admin.component';
 import { MenuAdminAlbumComponent } from './admin/menu-admin-album/menu-admin-album.component';
+import { MenuAdminCancionComponent } from './admin/menu-admin-cancion/menu-admin-cancion.component';
 import { MenuAdminGeneroComponent } from './admin/menu-admin-genero/menu-admin-genero.component';
 import { MenuAdminComponent } from './admin/menu-admin/menu-admin.component';
+import { MostrarRecomendarComponent } from './admin/mostrar-recomendar/mostrar-recomendar.component';
+import { TrackEnAlbumListarComponent } from './admin/track-en-album-listar/track-en-album-listar.component';
 import { AlbumListarComponent } from './album-listar/album-listar.component';
 import { AppComponent } from './app.component';
 import { ObtenerRolesService } from './autenticacionYRegistro/obtener-roles.service';
@@ -58,12 +63,14 @@ import { VotoService } from './objetoServices/voto.service';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { RecomendarListaComponent } from './recomendar-lista/recomendar-lista.component';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
+import { SelectAlbumComponent } from './select-album/select-album.component';
 import { TokenAuthComponentComponent } from './token-auth-component/token-auth-component.component';
 import { ToolBarHeaderComponent } from './tool-bar-header/tool-bar-header.component';
 import { TrackDeAlbumComponent } from './track-de-album/track-de-album.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { UsuarioVotanteListComponent } from './usuario-votante-list/usuario-votante-list.component';
 import { VotoListaComponent } from './voto-lista/voto-lista.component';
+
 
 @NgModule({
   declarations: [
@@ -96,7 +103,12 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     GeneroListarAdminComponent,
     MenuAdminAlbumComponent,
     MenuAdminGeneroComponent,
-    MenuAdminComponent
+    MenuAdminComponent,
+    TrackEnAlbumListarComponent,
+    MenuAdminCancionComponent,
+    MostrarRecomendarComponent,
+    AdminPageComponent,
+    SelectAlbumComponent
 
   ],
   imports: [
@@ -116,7 +128,8 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     MatButtonModule,
     MatTooltipModule,
     MatIconModule,
-    JwtModule
+    JwtModule,
+    MatSelectModule
 
   ],
   providers: [

@@ -1,12 +1,11 @@
+<p>admin-page works!</p>
 <p>user-page works!</p>
 <mat-card *ngIf="userInfo" class="user-info-container">
   <mat-card-content>
-    <h2>Welcome, {{ userInfo['nombre del perfil'] }}!</h2>
-    <p>Email: {{ userInfo.correo }}</p>
+    <h2>Welcome!</h2>
     <p>Name: {{ userInfo.nombre }}</p>
 
     <button mat-button color="primary" (click)="logout()" class="logout-button">Logout</button>
 
   </mat-card-content>
 </mat-card>
-
