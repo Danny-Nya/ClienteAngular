@@ -15,6 +15,8 @@ export class GeneroListarAdminComponent implements OnInit {
 
   }
 
+  clickedGenero: Genero | null = null;
+
   ngOnInit(): void {
     this.cargar();
   }
@@ -28,7 +30,17 @@ export class GeneroListarAdminComponent implements OnInit {
         console.log(err);
       }
     );
+
+    this.generoService.generoClick$.subscribe((genero) =>
+      this.handleGeneroClick(genero));
   }
+
+  handleGeneroClick(genero: Genero) {
+    this.clickedGenero = genero;
+    this.router.navigate(['/recomendar-lista', { genero: genero.id }]);
+  }
+
+
   borrar(id: number) {
     this.generoService.delete(id).subscribe(
       (response) => {

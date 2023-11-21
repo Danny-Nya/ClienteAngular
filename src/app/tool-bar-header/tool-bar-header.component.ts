@@ -47,13 +47,17 @@ navigateToRegistroDeUsuario() {
   const userRoles = this.authService.getRoles();
   console.log(userRoles);
 
-  if(userRoles.length == 0){
-  this.router.navigate(['/registrar-usuario']);
-  }else{
-    this.router.navigate(['/user-page'])
-  }
-}
+  if(userRoles && userRoles.length > 0){
+    if (userRoles.includes('Prueba')) {
+      this.router.navigate(['cliente/user-page']);
+    } else if(userRoles.includes('Admin')) {
+      this.router.navigate(['admin/user-page'])
+    }else{
 
+      console.error('User does not have the required role for this action');
+    }
+}
+}
 navigateToBuscarAlbumes() {
   const userRoles = this.authService.getRoles();
   console.log(userRoles);

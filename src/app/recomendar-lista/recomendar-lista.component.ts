@@ -6,6 +6,9 @@ import { RecomendarListaService } from '../listarService/recomendar-lista.servic
 import { Album } from '../modelo/album.interface';
 import { Genero } from '../modelo/genero.interface';
 import { Recomendacion } from '../modelo/recomendacion.interface';
+import { AlbumService } from '../objetoServices/album.service';
+import { GeneroService } from '../objetoServices/genero.service';
+import { RecomendacionService } from '../objetoServices/recomendacion.service';
 @Component({
   selector: 'app-recomendar-lista',
   templateUrl: './recomendar-lista.component.html',
@@ -22,7 +25,9 @@ export class RecomendarListaComponent implements OnInit{
   generoId: number = -1;
   showRecomendacion: boolean = true
 
-  constructor(private recomendarListaService: RecomendarListaService, private geroLista: GeneroListaService,private route: ActivatedRoute){
+  selectedAlbumId: number = -1;
+
+  constructor(private recomendarListaService: RecomendarListaService, private geroLista: GeneroListaService,private route: ActivatedRoute, private generoService: GeneroService, private albumService: AlbumService, private recomendarService: RecomendacionService){
 
     this.route.params.subscribe(params => {
       if (params['genero']) {
@@ -60,5 +65,64 @@ export class RecomendarListaComponent implements OnInit{
       console.log("albums:", this.albums);
   }
 
+  onAlbumSelected(albumId: number): void {
+    this.selectedAlbumId = albumId;
+    console.log(albumId);
 
+    if (this.selectedAlbumId && this.generoId) {
+      // Fetch details for the selected genero and album
+      this.generoService.detail(this.generoId).subscribe(
+        (genero: Genero) => {
+          console.log("Genero details:", genero);
+
+          this.albumService.detail(this.selectedAlbumId).subscribe(
+            (album: Album) => {
+              console.log("Album details:", album);
+
+
+              const recommendation: Recomendacion = {
+                id: this.generoId,
+                album_id: this.selectedAlbumId,
+                genero: {
+                  id: genero.id,
+                  nombre: genero.nombre,
+                },
+                album: {
+                  album_id: album.album_id,
+                name: album.name,
+                artist: album.artist,
+                type: album.type,
+                release_date: album.release_date,
+                rym_rating: album.rym_rating,
+                language: album.language,
+                genres: album.genres,
+                colorscheme: album.colorscheme,
+                trackListing: album.trackListing,
+                },
+              };
+
+              // Save the recommendation
+              this.recomendarService.save(recommendation).subscribe(
+                () => {
+                  console.log("Recommendation saved successfully!");
+                  window.location.reload();
+                },
+                (error) => {
+                  console.error('Error saving recommendation:', error);
+                }
+              );
+            },
+            (error) => {
+              console.error('Error fetching album details:', error);
+            }
+          );
+        },
+        (error) => {
+          console.error('Error fetching genero details:', error);
+        }
+      );
+    }
+  }
 }
+
+
