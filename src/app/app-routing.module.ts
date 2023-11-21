@@ -15,8 +15,10 @@ import { EditarAlbumComponent } from './admin/editar-album/editar-album.componen
 import { EditarGeneroComponent } from './admin/editar-genero/editar-genero.component';
 import { FormAlbumComponent } from './admin/form-album/form-album.component';
 import { MenuAdminAlbumComponent } from './admin/menu-admin-album/menu-admin-album.component';
+import { MenuAdminCancionComponent } from './admin/menu-admin-cancion/menu-admin-cancion.component';
 import { MenuAdminGeneroComponent } from './admin/menu-admin-genero/menu-admin-genero.component';
 import { MenuAdminComponent } from './admin/menu-admin/menu-admin.component';
+import { TrackEnAlbumListarComponent } from './admin/track-en-album-listar/track-en-album-listar.component';
 import { TrackDeAlbumComponent } from './track-de-album/track-de-album.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { UsuarioVotanteListComponent } from './usuario-votante-list/usuario-votante-list.component';
@@ -44,6 +46,8 @@ const routes: Routes = [
   {path: 'admin/menu-admin-genero', component: MenuAdminGeneroComponent},
   {path: 'admin/menu-admin-album', component: MenuAdminAlbumComponent},
   {path: 'admin/menu-admin', component: MenuAdminComponent},
+  {path: 'admin/album-lista/:id', component: TrackEnAlbumListarComponent},
+  {path: 'admin/menu-cliente-cancion-detalle/:id', component: MenuAdminCancionComponent},
   // Si se ingresa una ruta no existente, redirecciona a 'home'
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 

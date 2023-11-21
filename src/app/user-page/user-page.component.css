@@ -5,3 +5,8 @@
 .user-info-container mat-card-content p {
   color: black;
 }
+
+.logout-button {
+  margin: 20px;
+}
+

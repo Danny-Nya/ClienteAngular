@@ -27,8 +27,10 @@ import { FormCancionComponent } from './admin/form-cancion/form-cancion.componen
 import { FormGeneroComponent } from './admin/form-genero/form-genero.component';
 import { GeneroListarAdminComponent } from './admin/genero-listar-admin/genero-listar-admin.component';
 import { MenuAdminAlbumComponent } from './admin/menu-admin-album/menu-admin-album.component';
+import { MenuAdminCancionComponent } from './admin/menu-admin-cancion/menu-admin-cancion.component';
 import { MenuAdminGeneroComponent } from './admin/menu-admin-genero/menu-admin-genero.component';
 import { MenuAdminComponent } from './admin/menu-admin/menu-admin.component';
+import { TrackEnAlbumListarComponent } from './admin/track-en-album-listar/track-en-album-listar.component';
 import { AlbumListarComponent } from './album-listar/album-listar.component';
 import { AppComponent } from './app.component';
 import { ObtenerRolesService } from './autenticacionYRegistro/obtener-roles.service';
@@ -65,6 +67,7 @@ import { UserPageComponent } from './user-page/user-page.component';
 import { UsuarioVotanteListComponent } from './usuario-votante-list/usuario-votante-list.component';
 import { VotoListaComponent } from './voto-lista/voto-lista.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -96,7 +99,9 @@ import { VotoListaComponent } from './voto-lista/voto-lista.component';
     GeneroListarAdminComponent,
     MenuAdminAlbumComponent,
     MenuAdminGeneroComponent,
-    MenuAdminComponent
+    MenuAdminComponent,
+    TrackEnAlbumListarComponent,
+    MenuAdminCancionComponent
 
   ],
   imports: [
